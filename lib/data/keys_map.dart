@@ -1,4 +1,4 @@
-import 'package:demoapp/constants/answer_stages.dart';
+import 'package:wordle/constants/answer_stages.dart';
 
 Map<String, AnswerStages> keysMap = {
   'Q': AnswerStages.notAnswered,

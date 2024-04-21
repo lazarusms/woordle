@@ -1,6 +1,6 @@
-import 'package:demoapp/components/grid.dart';
-import 'package:demoapp/components/keyboard_row.dart';
+import 'package:wordle/components/grid.dart';
 import 'package:flutter/material.dart';
+import 'package:wordle/components/keyboard_row.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});

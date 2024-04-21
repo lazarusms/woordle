@@ -1,5 +1,7 @@
-import 'package:demoapp/data/keys_map.dart';
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
+import 'package:wordle/controller.dart';
+import 'package:wordle/data/keys_map.dart';
 
 class KeyboardRow extends StatelessWidget {
   const KeyboardRow({required this.min, required this.max, super.key});
@@ -24,10 +26,13 @@ class KeyboardRow extends StatelessWidget {
                       : size.width * 0.085,
                   height: size.height * 0.090,
                   child: Material(
-                      child: InkWell(onTap: () {}, child: Center(child: Text(e.key))))),
+                      child: InkWell(onTap: () {
+                        Provider.of<Controller>(context, listen: false)
+                          .setKeyTapped(value: e.key);
+                      }, child: Center(child: Text(e.key))))),
             );
           } else {
-            return const SizedBox(); // Replace with an empty widget if condition is not met
+            return const SizedBox(); 
           }
         }).toList());
   }

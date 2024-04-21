@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:wordle/components/tile.dart';
 
 class Grid extends StatelessWidget {
   const Grid({
@@ -16,9 +17,8 @@ class Grid extends StatelessWidget {
         itemBuilder: (context, index) {
           return Container(
               decoration: BoxDecoration(border: Border.all()),
-              child: Center(
-                child: Text(index.toString()),
-              ));
+              child: Tile(index: index,));
         });
   }
 }
+
