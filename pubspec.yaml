@@ -1,0 +1,15 @@
+name: wordle
+description: Uma descrição do seu projeto
+version: 1.0.0
+
+environment:
+  sdk: '>=2.17.0 <3.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  provider: 6.0.2
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
