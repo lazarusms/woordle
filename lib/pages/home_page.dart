@@ -1,6 +1,9 @@
-import 'package:wordle/components/grid.dart';
+import 'dart:math';
+
 import 'package:flutter/material.dart';
+import 'package:wordle/components/grid.dart';
 import 'package:wordle/components/keyboard_row.dart';
+import 'package:wordle/constants/words.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -10,6 +13,16 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
+
+  late String _word;
+
+  @override
+  void initState() {
+    final r = Random().nextInt(words.length);
+    _word = words[r];
+    super.initState();
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(

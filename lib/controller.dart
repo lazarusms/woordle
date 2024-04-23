@@ -12,7 +12,7 @@ class Controller extends ChangeNotifier {
       if(currentTile == 5 * (currentRow + 1)) {
         currentRow++;
         print('ENTER');
-
+ 
       }
     } 
     else if (value == 'BACK') {
